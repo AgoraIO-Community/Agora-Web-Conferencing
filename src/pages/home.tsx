@@ -101,7 +101,7 @@ function HomePage() {
     ref.current = true;
     globalStore.showLoading();
     roomStore.loginAndJoin(payload).then(() => {
-      history.push(`/classroom/${path}`);
+      history.push(`/meeting/${path}`);
     }).catch((err: any) => {
       if (err.reason) {
         globalStore.showToast({

@@ -3,7 +3,7 @@ import GlobalStorage from '../utils/custom-storage';
 
 export const roomTypes = [
   {value: 0, text: 'home.1v1', path: 'one-to-one'},
-  {value: 1, text: 'home.mini_class', path: 'small-class'},
+  {value: 1, text: 'home.mini_class', path: 'live'},
   {value: 2, text: 'home.large_class', path: 'big-class'},
 ]
 

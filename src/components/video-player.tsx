@@ -219,7 +219,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }, [stream, video, AgoraRtcEngine]);
 
   const onAudioClick = (evt: any) => {
+    console.log("audio click",handleClick,id);
     if (handleClick && id) {
+      console.log("audio click");
       handleClick('audio', streamID, id);
     }
   }

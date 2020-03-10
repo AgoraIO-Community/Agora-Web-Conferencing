@@ -147,7 +147,6 @@ export default function NavContainer() {
     }, []);
 
     const roomState = useRoomState();
-    console.log("nav logger", roomState, roomStore);
     const me = roomState.me;
     const { onPlayerClick } = useStream();
 

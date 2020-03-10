@@ -102,7 +102,7 @@ const VideoMarquee: React.FC<VideoMarqueeProps> = ({excludes}) => {
                 audio={student.audio}
                 local={student.local}
                 handleClick={onPlayerClick}
-              />:<></>
+              />:''
           ))
           }
         </div>

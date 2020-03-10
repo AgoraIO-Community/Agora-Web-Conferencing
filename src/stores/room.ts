@@ -523,42 +523,48 @@ export class RoomStore {
   }
 
   async mute(uid: string, type: string) {
-    const me = this.state.me;
-    if (me.uid === `${uid}`) {
-      if (type === 'audio') {
-        await this.updateMe({
-          audio: 0
-        });
+    try{
+      const me = this.state.me;
+      console.log("mute attempted");
+      if (me.uid === `${uid}`) {
+        if (type === 'audio') {
+          await this.updateMe({
+            audio: 0
+          });
+        }
+        if (type === 'video') {
+          await this.updateMe({
+            video: 0
+          });
+        }
+        if (type === 'chat') {
+          await this.updateMe({
+            chat: 0
+          });
+        }
+        // if (type === 'grantBoard') {
+        //   await this.updateMe({
+        //     grant_board: 0
+        //   });
+        // }
       }
-      if (type === 'video') {
-        await this.updateMe({
-          video: 0
-        });
+      else if (me.role === 'teacher') {
+        if (type === 'audio') {
+          await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteAudio });
+        }
+        if (type === 'video') {
+          await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteVideo });
+        }
+        if (type === 'chat') {
+          await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteChat });
+        }
+        if (type === 'grantBoard') {
+          await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteBoard });
+        }
       }
-      if (type === 'chat') {
-        await this.updateMe({
-          chat: 0
-        });
-      }
-      // if (type === 'grantBoard') {
-      //   await this.updateMe({
-      //     grant_board: 0
-      //   });
-      // }
     }
-    else if (me.role === 'teacher') {
-      if (type === 'audio') {
-        await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteAudio });
-      }
-      if (type === 'video') {
-        await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteVideo });
-      }
-      if (type === 'chat') {
-        await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteChat });
-      }
-      if (type === 'grantBoard') {
-        await this.rtmClient.sendPeerMessage(`${uid}`, { cmd: RoomMessage.muteBoard });
-      }
+    catch (e) {
+      console.log(e);
     }
   }
 

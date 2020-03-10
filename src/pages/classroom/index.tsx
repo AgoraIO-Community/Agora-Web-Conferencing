@@ -15,7 +15,7 @@ import { t } from '../../i18n';
 
 export const roomTypes = [
   {value: 0, text: 'One-on-One', path: 'one-to-one'},
-  {value: 1, text: 'Small Class', path: 'small-class'},
+  {value: 1, text: 'Small Class', path: 'live'},
   {value: 2, text: 'Large Class', path: 'big-class'},
 ];
 
@@ -91,9 +91,9 @@ export function RoomPage({ children }: any) {
   const roomState = useRoomState();
   const me = roomStore.state.me;
   const course = roomStore.state.course;
-  const classroom = Boolean(location.pathname.match(/classroom/));
+  const classroom = Boolean(location.pathname.match(/meeting/));
   const isBigClass = Boolean(location.pathname.match(/big-class/));
-  const isSmallClass = Boolean(location.pathname.match(/small-class/));
+  const isSmallClass = Boolean(location.pathname.match(/live/));
   
   useEffect(() => {
     return () => {
@@ -235,7 +235,7 @@ export function RoomPage({ children }: any) {
         webClient.rtc.on('stream-subscribed', ({ stream }: any) => {
           const streamID = stream.getId();
           // when streamID is not share_id use switch high or low stream in dual stream mode
-          if (location.pathname.match(/small-class/) && streamID !== SHARE_ID) {
+          if (location.pathname.match(/live/) && streamID !== SHARE_ID) {
             if (roomStore.state.course.teacherId
               && roomStore.state.course.teacherId === `${streamID}`) {
               webClient.setRemoteVideoStreamType(stream, 0);
@@ -350,7 +350,7 @@ export function RoomPage({ children }: any) {
         nativeClient.on('userjoined', (evt: any) => {
           const stream = evt.stream;
           const _stream = new AgoraStream(stream, stream.uid, false);
-          if (location.pathname.match(/small-class/) && stream.uid !== SHARE_ID) {
+          if (location.pathname.match(/live/) && stream.uid !== SHARE_ID) {
             if (roomStore.state.course.teacherId
               && roomStore.state.course.teacherId === `${stream.uid}`) {
               const res = nativeClient.rtcEngine.setRemoteVideoStreamType(stream, 0);
@@ -404,7 +404,7 @@ export function RoomPage({ children }: any) {
   }, [JSON.stringify([roomState.me.uid, roomState.course.rid])]);
 
   return (
-    <div className={`classroom ${roomType.path}`}>
+    <div className={`classroom small-class`}>
       <NativeSharedWindow />
       {children}
       <Nav />

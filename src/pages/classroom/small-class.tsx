@@ -8,7 +8,7 @@ import { roomStore } from '../../stores/room'
 import './small-class.scss';
 
 export default function SmallClass() {
-  const { teacher, students } = useStream();
+  const { teacher, students, onPlayerClick } = useStream();
   const group = [teacher, ...students];
   const me = roomStore.state.me;
 
@@ -39,6 +39,7 @@ export default function SmallClass() {
           video={student.video}
           audio={student.audio}
           local={student.local}
+          handleClick={onPlayerClick}
           fullView
         /> : <></>}
         {/* <MediaBoard /> */}
