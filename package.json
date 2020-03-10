@@ -1,0 +1,156 @@
+{
+  "name": "agora-edu-web",
+  "version": "5.1.0",
+  "private": true,
+  "homepage": ".",
+  "main": "./src/index.tsx",
+  "agora_electron": {
+    "electron_version": "5.0.8",
+    "prebuilt": true
+  },
+  "dmg": {
+    "compression": "store",
+    "npmRebuild": false,
+    "title": "agora_edu",
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  },
+  "build": {
+    "extraMetadata": {
+      "main": "build/index.js"
+    },
+    "productName": "AgoraEducation",
+    "appId": "io.agora.education",
+    "files": [
+      "build/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "icons/favicon.png",
+      "entitlements": "entitlements.mac.plist",
+      "category": "io.agora.Education",
+      "hardenedRuntime": true,
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "AgoraEdu Classroom acquire your microphone permission",
+        "NSCameraUsageDescription": "AgoraEdu Classroom acquire your camera permission"
+      }
+    },
+    "win": {
+      "icon": "icons/favicon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "icons/favicon.png",
+      "target": [
+        "deb",
+        "rpm",
+        "snap",
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
+    "@netless/react-seek-slider": "^1.0.4",
+    "agora-rtc-sdk": "3.0.0",
+    "agora-rtm-sdk": "1.2.2",
+    "ali-oss": "^6.3.1",
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "immutable": "^4.0.0-rc.12",
+    "js-md5": "^0.7.3",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-color": "2.17.3",
+    "react-dom": "^16.10.2",
+    "react-draggable": "^4.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "rxjs": "^6.5.3",
+    "typescript": "^3.6.4",
+    "uuid": "^3.3.3",
+    "white-web-sdk": "2.6.0",
+    "@netless/white-audio-plugin": "^1.1.10",
+    "@netless/white-video-plugin": "^1.1.17"
+  },
+  "scripts": {
+    "electron": "cross-env REACT_APP_RUNTIME_PLATFORM=electron ELECTRON_START_URL=http://localhost:3000 concurrently \"npm run electron:web\" \"wait-on http://localhost:3000 && npm run electron:client\"",
+    "electron:client": "cross-env electron ./app/",
+    "electron:web": "cross-env BROWSER=none react-app-rewired start",
+    "electron:copy:web": "cross-env REACT_APP_RUNTIME_PLATFORM=electron react-app-rewired build",
+    "electron:copy:electron": "cpx ./app/**/*.js ./build",
+    "electron:build": "npm run electron:copy:web && npm run electron:copy:electron",
+    "dev": "cross-env REACT_APP_RUNTIME_PLATFORM=web react-app-rewired start",
+    "build": "cross-env ENV=production REACT_APP_RUNTIME_PLATFORM=web react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "eject": "react-scripts eject",
+    "pack:mac": "npm run electron:build && electron-builder --mac",
+    "pack:win": "npm run electron:build && electron-builder --win"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@types/ali-oss": "^6.0.4",
+    "@types/jest": "^24.0.19",
+    "@types/lodash": "^4.14.145",
+    "@types/node": "^12.12.22",
+    "@types/react": "^16.9.9",
+    "@types/react-color": "^3.0.1",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/uuid": "^3.4.6",
+    "babel-plugin-import": "^1.13.0",
+    "cpx": "^1.5.0",
+    "customize-cra": "^0.8.0",
+    "devtron": "^1.4.0",
+    "electron": "5.0.8",
+    "electron-builder": "^21.2.0",
+    "react-app-rewired": "^2.1.4",
+    "react-use": "^13.24.0",
+    "source-map-support": "^0.5.16",
+    "wait-on": "^3.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+package-lock.json
+yarn.lock
+.env
+*.*~
+release/
+*.local
+build
+.DS_Store
+*.log
+src/assets/.DS_Store
+!src/assets/
+node_modules/
