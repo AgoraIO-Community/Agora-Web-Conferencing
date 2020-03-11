@@ -293,7 +293,7 @@ export function RoomPage({ children }: any) {
             uid: +roomState.me.uid, 
             channel: roomState.course.rid,
             token: '',
-            dual: isSmallClass
+            dual: false
           }).then(() => {
             
           }).catch(console.warn).finally(() => {
