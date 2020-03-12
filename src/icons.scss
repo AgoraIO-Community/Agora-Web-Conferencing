@@ -544,6 +544,32 @@
   }
 }
 
+.screen_sharing, .quit_screen_sharing{
+  width:28px;
+  height: 28px;
+}
+
+.screen_sharing::after {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ' ';
+  background-image: url('./assets/icon-share@2x.png');
+}
+
+.quit_screen_sharing::after {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ' ';
+  background-image: url('./assets/icon-share-white.png');
+}
+
 .icon-expand {
   cursor: pointer;
   display: flex;

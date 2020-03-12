@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Icon from './icon';
 import SettingCard from '../components/setting-card';
 import './nav.scss';
 import Button from './custom-button';
 import * as moment from 'moment';
-import { ClassState } from '../utils/types';
-import { NetworkQualityEvaluation } from '../utils/helper';
-import { usePlatform } from '../containers/platform-container';
+import {ClassState} from '../utils/types';
+import {NetworkQualityEvaluation} from '../utils/helper';
+import {usePlatform} from '../containers/platform-container';
 import AgoraWebClient from '../utils/agora-rtc-client';
-import { AgoraElectronClient } from '../utils/agora-electron-client';
-import { isElectron, platform } from '../utils/platform';
-import { useRoomState } from '../containers/root-container';
-import { roomStore } from '../stores/room';
-import { globalStore } from '../stores/global';
+import {AgoraElectronClient} from '../utils/agora-electron-client';
+import {isElectron, platform} from '../utils/platform';
+import {useRoomState} from '../containers/root-container';
+import {roomStore} from '../stores/room';
+import {globalStore} from '../stores/global';
 import useStream from '../hooks/use-streams';
 
-import { t } from '../i18n';
+import {t} from '../i18n';
 
 interface NavProps {
     delay: string
@@ -26,8 +26,9 @@ interface NavProps {
     time: number
     showSetting: boolean
     classState: boolean
-    audio:boolean,
-    video:boolean
+    audio: boolean,
+    video: boolean,
+    sharing:boolean,
     onCardConfirm: (type: string) => void
     handleClick: (type: string) => void
 }
@@ -49,6 +50,7 @@ export function Nav({
                         role,
                         roomName,
                         time,
+                        sharing,
                         audio,
                         video,
                         handleClick,
@@ -57,7 +59,7 @@ export function Nav({
                         onCardConfirm,
                     }: NavProps) {
 
-    const { NavBtn } = usePlatform();
+    const {NavBtn} = usePlatform();
 
     const handleFinish = (evt: any) => {
         onCardConfirm('setting');
@@ -68,31 +70,40 @@ export function Nav({
             <div className={`nav-container ${isElectron ? 'draggable' : ''}`}>
 
 
-                <div className="menu" style={{ width: '100%' }}>
+                <div className="menu" style={{width: '100%'}}>
                     {/* <div className="timer">
           <Icon className="icon-time" disable />
           <span className="time">{moment.utc(time).format('HH:mm:ss')}</span>
         </div> */}
                     {/* {roomName} */}
                     {/* <span className="menu-split" /> */}
-                    <div style={{ justifyContent: 'space-evenly', width: '75%', margin:'auto' }} className={platform === 'web' ? "btn-group" : 'electron-btn-group'}>
-                        <Icon className={`${(audio)?"icon-speaker-on" : "icon-speaker-off"} blue`}
+                    <div style={{justifyContent: 'space-evenly', width: '75%', margin: 'auto'}}
+                         className={platform === 'web' ? "btn-group" : 'electron-btn-group'}>
+                        <Icon className={`${(audio) ? "icon-speaker-on" : "icon-speaker-off"} blue`}
                               data={"audio"}
-                              onClick={(evt: any)=>{
+                              onClick={(evt: any) => {
                                   handleClick("audio")
                               }}
                         />
-                        <Icon className={`${(video)?"icons-camera-unmute-s" : "icons-camera-mute-s"} blue`}
+                        <Icon className={`${(video) ? "icons-camera-unmute-s" : "icons-camera-mute-s"} blue`}
                               data={"video"}
-                              onClick={(evt: any)=>{
+                              onClick={(evt: any) => {
                                   handleClick("video")
                               }}
+                        />
+                        <Icon
+                            data={sharing ? 'quit_screen_sharing' : 'screen_sharing'}
+                            onClick={(evt:any)=>{
+                                sharing ? roomStore.setScreenShare(false) : roomStore.setScreenShare(true);
+                            }}
+                            className={`items ${sharing ? 'quit_screen_sharing' : 'screen_sharing'}`}
+                            // style={sharing?{backgroundColor:'#3e5691'}:{}}
                         />
                         {platform === 'web' ?
                             <>
                                 <Icon className="icon-setting" onClick={(evt: any) => {
                                     handleClick("setting");
-                                }} />
+                                }}/>
                                 {/* <Icon className="i18n-lang" onClick={(evt: any) => {
                   handleClick("i18n");
                 }}></Icon> */}
@@ -100,14 +111,14 @@ export function Nav({
                         }
                         <Icon className="icon-exit" onClick={(evt: any) => {
                             handleClick("exit");
-                        }} />
+                        }}/>
                     </div>
-                    <NavBtn />
+                    <NavBtn/>
                 </div>
             </div>
             {showSetting ?
                 <SettingCard className="internal-card"
-                             handleFinish={handleFinish} /> : null
+                             handleFinish={handleFinish}/> : null
             }
         </>
     )
@@ -148,7 +159,7 @@ export default function NavContainer() {
 
     const roomState = useRoomState();
     const me = roomState.me;
-    const { onPlayerClick } = useStream();
+    const {onPlayerClick, sharedStream} = useStream();
 
     useEffect(() => {
         const rtcClient = roomStore.rtcClient;
@@ -162,13 +173,15 @@ export default function NavContainer() {
                 !ref.current && updateQuality(quality);
             })
             return () => {
-                webClient.rtc.off('watch-rtt', () => { });
-                webClient.rtc.off('network-quality', () => { });
+                webClient.rtc.off('watch-rtt', () => {
+                });
+                webClient.rtc.off('network-quality', () => {
+                });
             }
         }
         if (platform === 'electron') {
             const nativeClient = rtcClient as AgoraElectronClient;
-            nativeClient.on('rtcStats', ({ cpuTotalUsage }: any) => {
+            nativeClient.on('rtcStats', ({cpuTotalUsage}: any) => {
                 !ref.current && updateCpuUsage(cpuTotalUsage);
             });
             nativeClient.on('networkquality', (
@@ -185,9 +198,12 @@ export default function NavContainer() {
             })
 
             return () => {
-                nativeClient.off('rtcStats', () => { });
-                nativeClient.off('networkquality', () => { });
-                nativeClient.off('audioquality', () => { });
+                nativeClient.off('rtcStats', () => {
+                });
+                nativeClient.off('networkquality', () => {
+                });
+                nativeClient.off('audioquality', () => {
+                });
             }
         }
     }, []);
@@ -241,9 +257,8 @@ export default function NavContainer() {
             updateClassState();
         } else if (type === 'i18n-lang') {
             // globalStore.setLanguage()
-        }
-        else {
-            onPlayerClick(type,Number(me.uid),me.uid)
+        } else {
+            onPlayerClick(type, Number(me.uid), me.uid)
         }
     }
 
@@ -272,6 +287,7 @@ export default function NavContainer() {
             handleClick={handleClick}
             audio={Boolean(me.audio)}
             video={Boolean(me.video)}
+            sharing={Boolean(sharedStream)}
         />
     )
 }

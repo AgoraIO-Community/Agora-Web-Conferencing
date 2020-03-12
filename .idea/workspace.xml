@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680b6c08-5d48-4f15-8f7b-a046ad7748d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/classroom/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/classroom/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mediaboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mediaboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/classroom/small-class.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/classroom/small-class.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,19 +20,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/index.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/nav.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="162">
+              <caret line="101" column="45" lean-forward="true" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#4733#4857#0" />
+                <element signature="e#5111#5292#0" />
+                <element signature="e#5431#7045#0" />
+                <element signature="e#7165#7478#0" />
+                <element signature="e#7559#7632#0" />
+                <element signature="e#7675#8066#0" />
+                <element signature="e#8111#8600#0" />
+                <element signature="e#8650#8872#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/root-container.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/whiteboard/control.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2607">
-              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+            <state relative-caret-position="-3279">
+              <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -37,52 +51,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/room.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/agora-rtc-client.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6567">
-              <caret line="202" column="72" selection-start-line="202" selection-start-column="72" selection-end-line="202" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/classroom/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="291" column="24" lean-forward="true" selection-start-line="291" selection-start-column="24" selection-end-line="291" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/custom-browser-router.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <caret line="937" column="2" selection-start-line="937" selection-start-column="2" selection-end-line="937" selection-end-column="2" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/home.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2145">
-              <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,17 +63,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/classroom/small-class.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="360">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/i18n/en.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/mediaboard.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+            <state relative-caret-position="228">
+              <caret line="625" column="24" lean-forward="true" selection-start-line="625" selection-start-column="24" selection-end-line="625" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+                <element signature="e#1410#1547#0" />
+                <element signature="n#!!block;n#MediaBoardProps#0" />
+                <element signature="e#2167#5265#0" />
+                <element signature="e#5337#6348#0" />
+                <element signature="e#6381#6457#0" />
+                <element signature="e#6591#6669#0" />
+                <element signature="e#6767#6830#0" />
+                <element signature="e#6881#6950#0" />
+                <element signature="e#7005#7392#0" />
+                <element signature="e#7449#8067#0" />
+                <element signature="e#8114#8299#0" />
+                <element signature="e#8321#8614#0" />
+                <element signature="e#8651#9011#0" />
+                <element signature="e#9076#9519#0" />
+                <element signature="e#9767#10640#0" />
+                <element signature="e#10683#10826#0" />
+                <element signature="e#10886#11063#0" />
+                <element signature="e#11089#12248#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +112,13 @@
       <find>small-class</find>
       <find>classroom</find>
       <find>live</find>
+      <find>shared</find>
+      <find>local</find>
+      <find>contr</find>
+      <find>localSh</find>
+      <find>screen</find>
+      <find>scree</find>
+      <find>Boolean(sha</find>
     </findStrings>
     <replaceStrings>
       <replace>Admin</replace>
@@ -131,23 +134,26 @@
         <option value="$PROJECT_DIR$/src/hooks/use-streams.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/stores/room.ts" />
-        <option value="$PROJECT_DIR$/src/components/nav.tsx" />
         <option value="$PROJECT_DIR$/src/components/video-player.tsx" />
-        <option value="$PROJECT_DIR$/src/pages/classroom/small-class.tsx" />
         <option value="$PROJECT_DIR$/src/components/video-marquee.tsx" />
         <option value="$PROJECT_DIR$/src/i18n/en.ts" />
         <option value="$PROJECT_DIR$/src/pages/home.tsx" />
         <option value="$PROJECT_DIR$/src/pages/index.tsx" />
         <option value="$PROJECT_DIR$/src/stores/global.ts" />
         <option value="$PROJECT_DIR$/src/pages/classroom/index.tsx" />
+        <option value="$PROJECT_DIR$/src/icons.scss" />
+        <option value="$PROJECT_DIR$/src/components/icon.tsx" />
+        <option value="$PROJECT_DIR$/src/components/nav.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/classroom/small-class.tsx" />
+        <option value="$PROJECT_DIR$/src/components/mediaboard.tsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="y" value="-4" />
+    <option name="x" value="-85" />
+    <option name="y" value="57" />
     <option name="width" value="1922" />
-    <option name="height" value="1085" />
+    <option name="height" value="1078" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,7 +178,27 @@
               <item name="education_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="education_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="education_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="education_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="whiteboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="education_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="education_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="education_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="education_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="classroom" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,15 +236,25 @@
       <option name="presentableId" value="Default" />
       <updated>1583866077587</updated>
       <workItem from="1583866080724" duration="11356000" />
-      <workItem from="1583931283492" duration="270000" />
+      <workItem from="1583931283492" duration="16883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11992000" />
+    <option name="totallyTimeSpent" value="28605000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
+    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19110641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -229,7 +265,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32980973" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32875264" />
@@ -321,42 +357,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/video-player.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#1224#3863#0" />
-            <element signature="e#1313#3859#0" />
-            <element signature="e#3918#4634#0" />
-            <element signature="e#4674#5870#0" />
-            <element signature="e#5925#7122#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.local">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/nav.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="245" column="12" selection-start-line="245" selection-start-column="12" selection-end-line="245" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hooks/use-streams.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-861">
-          <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -401,30 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/root-container.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2607">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/room.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/agora-rtc-client.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6567">
-          <caret line="202" column="72" selection-start-line="202" selection-start-column="72" selection-end-line="202" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/custom-browser-router.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -445,13 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/classroom/small-class.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/i18n/en.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
@@ -459,10 +432,219 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/agora-rtc-client.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="424" column="12" selection-start-line="424" selection-start-column="12" selection-end-line="424" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/classroom/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9471">
+          <caret line="300" column="13" lean-forward="true" selection-start-line="300" selection-start-column="13" selection-end-line="300" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/video-player.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="272" column="15" selection-start-line="272" selection-start-column="15" selection-end-line="272" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#1224#3863#0" />
+            <element signature="e#1313#3859#0" />
+            <element signature="e#3918#4634#0" />
+            <element signature="e#4674#5870#0" />
+            <element signature="e#5925#7122#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/native-shared-window.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2451">
+          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/whiteboard/scale-controller.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1287" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/whiteboard/tools.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/white-web-sdk/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="345" column="11" selection-start-line="345" selection-start-column="11" selection-end-line="345" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/cancel-share.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-share-white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-share-white@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-pause@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-right@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-setting@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-share@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-sidebar-off-active@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-sidebar-off-deafult@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-sidebar-off-hover@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/signal-bad@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/signal-good@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/signal-normal@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/tool-square@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/whiteboard_file.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-speaker01-disable@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-signal02@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/icon-signal03@2x.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="549" column="1" lean-forward="true" selection-start-line="549" selection-start-column="1" selection-end-line="549" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hooks/use-streams.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/icon.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="86" lean-forward="true" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/root-container.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="101" column="45" lean-forward="true" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#4733#4857#0" />
+            <element signature="e#5111#5292#0" />
+            <element signature="e#5431#7045#0" />
+            <element signature="e#7165#7478#0" />
+            <element signature="e#7559#7632#0" />
+            <element signature="e#7675#8066#0" />
+            <element signature="e#8111#8600#0" />
+            <element signature="e#8650#8872#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/whiteboard/control.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3279">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/room.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="291" column="24" lean-forward="true" selection-start-line="291" selection-start-column="24" selection-end-line="291" selection-end-column="24" />
+          <caret line="937" column="2" selection-start-line="937" selection-start-column="2" selection-end-line="937" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/classroom/small-class.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/mediaboard.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="625" column="24" lean-forward="true" selection-start-line="625" selection-start-column="24" selection-end-line="625" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+            <element signature="e#1410#1547#0" />
+            <element signature="n#!!block;n#MediaBoardProps#0" />
+            <element signature="e#2167#5265#0" />
+            <element signature="e#5337#6348#0" />
+            <element signature="e#6381#6457#0" />
+            <element signature="e#6591#6669#0" />
+            <element signature="e#6767#6830#0" />
+            <element signature="e#6881#6950#0" />
+            <element signature="e#7005#7392#0" />
+            <element signature="e#7449#8067#0" />
+            <element signature="e#8114#8299#0" />
+            <element signature="e#8321#8614#0" />
+            <element signature="e#8651#9011#0" />
+            <element signature="e#9076#9519#0" />
+            <element signature="e#9767#10640#0" />
+            <element signature="e#10683#10826#0" />
+            <element signature="e#10886#11063#0" />
+            <element signature="e#11089#12248#0" />
+          </folding>
         </state>
       </provider>
     </entry>
