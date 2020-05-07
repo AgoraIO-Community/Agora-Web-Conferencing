@@ -29,4 +29,4 @@ REACT_APP_AGORA_OSS_BUCKET_KEY=your_bucket_ak
 REACT_APP_AGORA_OSS_BUCKET_SECRET=your_bucket_sk
 ```
 
-### Run `npm run dev` to serve the website on a develpment server
+### Run `npm run dev` to serve the website on a development server
