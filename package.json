@@ -146,7 +146,7 @@
     "cpx": "^1.5.0",
     "customize-cra": "^0.8.0",
     "devtron": "^1.4.0",
-    "electron": "5.0.8",
+    "electron": "9.1.0",
     "electron-builder": "^21.2.0",
     "react-app-rewired": "^2.1.4",
     "react-use": "^13.24.0",
